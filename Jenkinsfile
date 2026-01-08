@@ -27,14 +27,13 @@ pipeline {
         stage('Deploy') {
             steps {
                 bat 'echo "Deploying application... (simulated)"'
-                // In real use: deploy to server, Docker, etc.
             }
         }
     }
 
     post {
         always {
-            cleanWs()  // Clean workspace after build (requires Workspace Cleanup Plugin)
+            cleanWs()
         }
     }
 }

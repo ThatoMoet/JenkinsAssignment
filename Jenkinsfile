@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools {
-        maven 'Maven-3.8.6'  // Must be pre-configured in Jenkins Global Tools
+        maven 'Default-Maven'  // Must be pre-configured in Jenkins Global Tools
         jdk 'OpenJDK11'     // Must be pre-configured in Jenkins Global Tools
     }
 

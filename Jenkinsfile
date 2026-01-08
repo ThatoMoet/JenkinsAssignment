@@ -9,13 +9,13 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'mvn clean compile'
+                bat 'mvn clean compile'
             }
         }
 
         stage('Test') {
             steps {
-                sh 'mvn test'
+                bat 'mvn test'
             }
             post {
                 always {
@@ -26,7 +26,7 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                sh 'echo "Deploying application... (simulated)"'
+                bat 'echo "Deploying application... (simulated)"'
                 // In real use: deploy to server, Docker, etc.
             }
         }
